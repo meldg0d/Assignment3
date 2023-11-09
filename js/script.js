@@ -27,12 +27,23 @@
     $(image).animate({
       left: targetX,
       top: targetY
-    }, 500);
+    }, 2000);
   }
 
   $(document).ready(function() {
     // Trigger moveImageToPosition function when any image with class "movable-image" is clicked
     $('.movable-image').click(function() {
       moveImageToPosition(this);
+    });
+
+    // Add shake effect when hovering over any image with class "apple"
+    $('.apple').hover(function() {
+      $(this).css("transform", "rotate(10deg)");
+      $(this).animate({ "transform": "rotate(-10deg)" }, {
+        duration: 100,
+        complete: function() {
+          $(this).css("transform", "");
+        }
+      });
     });
   });
