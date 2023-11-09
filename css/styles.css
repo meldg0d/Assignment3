@@ -31,12 +31,16 @@ body {
 }
 
 .apple {
+    z-index: 1;
     height: 50px;
     width: auto;
     position: absolute;
+    left: 900px;
+    top: 400px;
 }
 
 #tree {
+    z-index: -1;
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -49,6 +53,11 @@ body {
     bottom: 20px;
     left: 20%;
 
+}
+
+.movable-image {
+    position: absolute;
+    cursor: pointer;
 }
 
 

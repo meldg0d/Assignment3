@@ -16,3 +16,23 @@
   $(document).ready(function() {
     moveImageRandomly();
   });
+
+
+  function moveImageToPosition(image) {
+    // Set the desired position
+    var targetX = 400;
+    var targetY = 700;
+
+    // Move the clicked image to the specified position
+    $(image).animate({
+      left: targetX,
+      top: targetY
+    }, 500);
+  }
+
+  $(document).ready(function() {
+    // Trigger moveImageToPosition function when any image with class "movable-image" is clicked
+    $('.movable-image').click(function() {
+      moveImageToPosition(this);
+    });
+  });
