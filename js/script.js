@@ -1,6 +1,9 @@
 //MAKE THE MAGIC HAPPEN
+    $('.apple').each(function(){
+        $(this).css({"right": (Math.random() * 400) + 200 , "top": (Math.random() * 300) + 150})
+    });  
 
-  function moveImageRandomly() {
+function moveImageRandomly() {
     var maxX = $(window).width() - $('#butterfly').width();
     var maxY = $(window).height() - $('#butterfly').height();
 

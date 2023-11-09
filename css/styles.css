@@ -35,8 +35,6 @@ body {
     height: 50px;
     width: auto;
     position: absolute;
-    left: 900px;
-    top: 400px;
 }
 
 #tree {
@@ -44,7 +42,6 @@ body {
     position: fixed;
     bottom: 20px;
     left: 50%;
-
 }
 
 .basket {
