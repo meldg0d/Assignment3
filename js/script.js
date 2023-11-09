@@ -51,7 +51,6 @@ function moveImageRandomly() {
     });
   });
 
-
   // Audio
   window.addEventListener("DOMContentLoaded", event => {
     const audio = document.querySelector("audio");
@@ -63,3 +62,12 @@ function moveImageRandomly() {
   var apple1 = new Audio("sounds/apple.mp3");
   var apple2 = new Audio("sounds/apple.mp3");
   var apple3 = new Audio("sounds/apple.mp3");
+
+  $(document).ready(function () {
+    $("#wateringcan").click(function () {
+        $(this).toggleClass("tilt");
+        if ($(this).hasClass("tilt")) {
+          $("body").append('<img src="images/waterdrop.png" class="waterdrop" alt="waterdrop">')
+        } 
+        }
+)});
