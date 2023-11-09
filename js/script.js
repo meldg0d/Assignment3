@@ -23,8 +23,8 @@ function moveImageRandomly() {
 
   function moveImageToPosition(image) {
     // Set the desired position
-    var targetX = 400;
-    var targetY = 700;
+    var targetX = "25%";
+    var targetY = "85%";
 
     // Move the clicked image to the specified position
     $(image).animate({
@@ -63,12 +63,3 @@ function moveImageRandomly() {
   var apple1 = new Audio("sounds/apple.mp3");
   var apple2 = new Audio("sounds/apple.mp3");
   var apple3 = new Audio("sounds/apple.mp3");
-
-  $(document).ready(function () {
-    $("#wateringcan").click(function () {
-        $(this).toggleClass("tilt");
-        if ($(this).hasClass("tilt")) {
-          $("body").append('<img src="images/waterdrop.png" class="waterdrop" alt="waterdrop">')
-        } 
-        }
-)});
