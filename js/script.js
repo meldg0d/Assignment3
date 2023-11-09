@@ -30,7 +30,7 @@ function moveImageRandomly() {
     $(image).animate({
       left: targetX,
       top: targetY
-    }, 2000);
+    }, 400);
   }
 
   $(document).ready(function() {
@@ -50,3 +50,16 @@ function moveImageRandomly() {
       });
     });
   });
+
+
+  // Audio
+  window.addEventListener("DOMContentLoaded", event => {
+    const audio = document.querySelector("audio");
+    audio.volume = 0.4;
+    audio.play();
+  });
+
+
+  var apple1 = new Audio("sounds/apple.mp3");
+  var apple2 = new Audio("sounds/apple.mp3");
+  var apple3 = new Audio("sounds/apple.mp3");
