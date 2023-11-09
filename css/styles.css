@@ -26,7 +26,7 @@ body {
     top: 680px;
     left: 740px;
 	position: absolute;
-    opacity: 0; 
+    animation: fall 2s linear forwards;
 }
 
 
@@ -41,7 +41,6 @@ body {
     height: 600px;
     width: auto;
     position: absolute;
-
 }
 
 .apple {
