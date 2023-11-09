@@ -17,10 +17,24 @@ body {
     left: 40%;
 }
 
+.tilt {
+    transform: rotate(-30deg);
+}
 
 .waterdrop {
     width: 20px;
+    top: 680px;
+    left: 740px;
 	position: absolute;
+    opacity: 0; 
+}
+
+
+@keyframes fall {
+    to {
+        top: 100%;
+        opacity: 1;
+    }
 }
 
 #net {

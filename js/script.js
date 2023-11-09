@@ -16,3 +16,12 @@
   $(document).ready(function() {
     moveImageRandomly();
   });
+
+  $(document).ready(function () {
+    $("#wateringcan").click(function () {
+        $(this).toggleClass("tilt");
+        if ($(this).hasClass("tilt")) {
+          $("body").append('<img src="images/waterdrop.png" class="waterdrop" alt="waterdrop">')
+        } 
+        }
+)});
