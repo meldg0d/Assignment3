@@ -83,6 +83,17 @@ window.addEventListener("DOMContentLoaded", event => {
   audio.play();
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Get the audio element
+  var backgroundAudio = document.getElementById("backgroundAudio");
+
+  // Set the volume (optional)
+  backgroundAudio.volume = 0.4;
+
+  // Play the audio
+  backgroundAudio.play();
+});
+
 var apple1 = new Audio("sounds/apple.mp3");
 var apple2 = new Audio("sounds/apple.mp3");
 var apple3 = new Audio("sounds/apple.mp3");
@@ -162,8 +173,3 @@ function isCollisionTopPole(net, butterfly) {
 
 // Initial call to start the random movement
 moveImageRandomly(3000);
-
-
-
-console.log("test123")
-
