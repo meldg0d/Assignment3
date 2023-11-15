@@ -64,5 +64,5 @@ function moveImageRandomly() {
     image.style.top = (mouseY - image.height / 2) + 'px';
 
   });
-
+console.log("test123")
 
