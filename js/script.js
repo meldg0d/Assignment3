@@ -75,6 +75,17 @@ $(document).ready(function () {
   });
 });
 
+
+// Audio
+window.addEventListener("DOMContentLoaded", event => {
+  const audio = document.querySelector("audio");
+  audio.volume = 0.4;
+  audio.play();
+});
+
+var apple1 = new Audio("sounds/apple.mp3");
+var apple2 = new Audio("sounds/apple.mp3");
+var apple3 = new Audio("sounds/apple.mp3");
  
 //Butterfly
 var net = document.getElementById('net');
