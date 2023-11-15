@@ -51,23 +51,15 @@ function moveImageRandomly() {
     });
   });
 
-  // Audio
-  window.addEventListener("DOMContentLoaded", event => {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.4;
-    audio.play();
+  var image = document.getElementById('net');
+
+  // musebevægelser på dokumentet
+  document.addEventListener('mousemove', function(event) {
+    // Opdater billede til musepositionen
+    var mouseX = event.clientX;
+    var mouseY = event.clientY;
+
+    // Juster billedets position for at centrere det omkring musen
+    image.style.left = (mouseX - image.width / 2) + 'px';
+    image.style.top = (mouseY - image.height / 2) + 'px';
   });
-
-
-  var apple1 = new Audio("sounds/apple.mp3");
-  var apple2 = new Audio("sounds/apple.mp3");
-  var apple3 = new Audio("sounds/apple.mp3");
-
-  $(document).ready(function () {
-    $("#wateringcan").click(function () {
-        $(this).toggleClass("tilt");
-        if ($(this).hasClass("tilt")) {
-          $("body").append('<img src="images/waterdrop.png" class="waterdrop" alt="waterdrop">')
-        } 
-        }
-)});
