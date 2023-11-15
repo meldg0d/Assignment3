@@ -62,4 +62,7 @@ function moveImageRandomly() {
     // Juster billedets position for at centrere det omkring musen
     image.style.left = (mouseX - image.width / 2) + 'px';
     image.style.top = (mouseY - image.height / 2) + 'px';
+
   });
+
+
