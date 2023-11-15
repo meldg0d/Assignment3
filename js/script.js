@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
   backgroundAudio.play();
 });
 
+
 var apple1 = new Audio("sounds/apple.mp3");
 var apple2 = new Audio("sounds/apple.mp3");
 var apple3 = new Audio("sounds/apple.mp3");
@@ -173,3 +174,49 @@ function isCollisionTopPole(net, butterfly) {
 
 // Initial call to start the random movement
 moveImageRandomly(3000);
+
+
+//Watercan
+$(document).ready(function () {
+    let isTilted = false;
+
+    $("#wateringcan").click(function () {
+        isTilted = !isTilted;
+        $(this).toggleClass("tilt", isTilted);
+
+        if (isTilted) {
+            createWaterdrops();
+        }
+    });
+
+    function createWaterdrops() {
+        const waterdrop = $('<img src="images/waterdrop.png" class="waterdrop" alt="waterdrop">');
+        $("body").append(waterdrop);
+
+        waterdrop.animate(
+            { top: $(window).height() },
+            {
+                duration: 1000, 
+                easing: "linear",
+                complete: function () {
+                    $(this).remove();
+                    if (isTilted) {
+                        createWaterdrops(); 
+                    }
+                },
+            }
+        );
+    }
+    $(document).ready(function() {
+      function moveCloud() {
+          $('.cloud').animate({
+              left: '100%',
+          }, 10000, 'linear', function() {
+              $(this).css('left', '-100px');
+              moveCloud();
+          });
+      }
+      moveCloud();
+    });
+    
+});

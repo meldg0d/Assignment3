@@ -75,6 +75,22 @@ body {
     cursor: pointer;
 }
 
+.cloud {
+    background-image:url("../images/white-cloud-png.webp");
+    background-size: contain;
+    width: 435px;
+    height: 110px;
+    position: absolute;
+    top: 10px; 
+    left: -200px; 
+}
+
+.score {
+    margin-top: 10%;
+    margin-left: 1%;
+    color: green;
+    
+}
 
 body {
     margin: 0px;
